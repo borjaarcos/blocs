@@ -1,0 +1,35 @@
+index:
+    path: /
+    defaults: { _controller: 'App\Controller\DefaultController::index' }
+
+# new_comment:
+#     path: /add-acomment
+homeUser:
+    path: /homeUser
+    controller: App\Controller\UserController::index
+login:
+    path: /login
+    controller: App\Controller\UserController::login
+logout:
+    path: /logout
+    controller: App\Controller\HomeController::logout
+    
+username_test:
+    path: /username-test
+    controller: App\Controller\UserController::usernameTest
+    methods: [POST]
+admin_user:
+    path: /admin/user
+    controller: App\Controller\Admin\AdminController::listUsers
+    
+new_post:
+    path: /add-post
+    controller: App\Controller\PostController::newPost
+
+edit_post_id:
+    path: /admin/{id}/edit
+    controller: App\Controller\Admin\AdminController::editUserID
+    requirements:
+        id: '\d+'
+
+        
